@@ -276,7 +276,7 @@ Monitor SPF Module
     /interface ethernet monitor sfp1
 
 ## Bridge Interfaces
-
+The bridge feature allows the interconnection of hosts connected to separate LANs (using EoIP, geographically distributed networks can be bridged as well if any kind of IP network interconnection exists between them) as if they were attached to a single LAN
 
 
 Creating Bridges
