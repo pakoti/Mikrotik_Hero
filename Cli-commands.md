@@ -258,6 +258,8 @@ show interface in a brief Mode
 
      /interface ethernet print brief
 
+
+## POE and SPF
 show POE Modes and status
 
     /interface ethernet poe print detail
@@ -274,3 +276,24 @@ Monitor SPF Module
     /interface ethernet monitor sfp1
 
 ## Bridge Interfaces
+
+
+
+Creating Bridges
+
+    /interface bridge
+    add name="LAN Bridge" comment=LAN
+
+
+This speeds up connections on bridges with two or more interfaces attached:
+
+    /interface bridge
+    add name="LAN Bridge" comment=LAN fast-forward=yes
+
+Adding Ports
+
+    /interface bridge
+    add name="LAN Bridge" comment=LAN fast-forward=yes
+    /interface bridge port
+    add interface=ether2 bridge="LAN Bridge"
+    add interface=ether3 bridge="LAN Bridge"
