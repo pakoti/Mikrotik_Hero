@@ -1,5 +1,24 @@
 # Mikrotik 
-
+we discuss following topics.
+<ul>
+<li>RouterOS Software</li>
+<li>default configurations</li>
+<li>Accessing the Router</li>
+<li>Configuring RouterOS</li>
+<li>Managing Users</li>
+<li>Interfaces</li>
+<li>Addresses</li>
+<li>Routing</li>
+<li>VPNs and Tunnels</li>
+<li>Queues</li>
+<li>Firewalls</li>
+<li>NAT</li>
+<li>Wireless Networks</li>
+<li>Wireless Security</li>
+<li>Troubleshooting Tools</li>
+<li>RouterOS Monitoring</li>
+<li>The Dude</li>
+</ul>
 
 ## How to Mikrotik Factory Reset Guide
 <ul>
@@ -17,7 +36,6 @@
 
 
 ## Mikrotik cheatsheets
-
 
 set router name to Router-1
 
@@ -211,3 +229,47 @@ Formatting USB Storage
 Device Reset
 
     /system reset-configuration keep-users=no no-defaults=yes
+
+
+
+
+# Interfaces
+
+To list all interfaces present on RouterOS
+
+    /interface print
+
+
+only Count interfaces
+
+    /interface print count-only
+
+
+count only wlans
+
+    /interface print count-only where type="wlan"
+
+
+count only running interfaces
+
+    /interface print stats follow where running
+
+show interface in a brief Mode
+
+     /interface ethernet print brief
+
+show POE Modes and status
+
+    /interface ethernet poe print detail
+    
+Monitor ether5
+    /interface ethernet poe monitor ether5
+
+Power-Cycle POE
+
+    /interface ethernet poe power-cycle ether5 duration=10s
+
+Monitor SPF Module
+
+    /interface ethernet monitor sfp1
+
