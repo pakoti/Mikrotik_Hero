@@ -149,3 +149,65 @@ HotLock:autocomplete commands
 Clearing Command History:clear commands after you sensitive informations
 
     /console clear-history
+
+
+
+Safe Mode: built-in capabilities to protect you from locking yourself out of a device.
+
+    [CTRL+X]
+
+
+Login Banner
+
+    /system note set show-at-login=yes
+
+
+have your own banner
+
+    /system note
+
+
+show time settings
+
+    /system clock print
+
+NTP configurations
+
+    /system ntp client print
+
+
+Device Backup:Backup files are automatically created with a ”.backup” file extension
+
+
+    /system backup save name=our_backup
+
+
+lists files on the router
+
+    /file print
+
+
+find backups files in the router
+
+    /file print where type=backup
+
+
+Device Restore:
+
+    /system backup load name=config.backup
+
+
+
+Using USB Storage
+
+    /disk print
+
+
+Formatting USB Storage
+
+    /disk format-drive 0 label=Backup file-system=fat32
+
+
+Device Reset
+
+    /system reset-configuration keep-users=no no-defaults=yes
