@@ -124,3 +124,28 @@ setup DHCP server in cli
 show dhcp servers Status
 
      /ip dhcp-server> print
+
+
+
+
+shows a summary of recent configuration changes made on the system and which user performed them
+
+    /system history print
+
+
+
+Rolling Back Commands
+
+    /undo
+
+
+HotLock:autocomplete commands
+
+    [CTRL+V][Enter]
+
+
+
+
+Clearing Command History:clear commands after you sensitive informations
+
+    /console clear-history
