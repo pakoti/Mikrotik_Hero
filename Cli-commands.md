@@ -297,3 +297,60 @@ Adding Ports
     /interface bridge port
     add interface=ether2 bridge="LAN Bridge"
     add interface=ether3 bridge="LAN Bridge"
+
+
+Removing Bridge Ports:
+list the ports attached to bridges and selectively remove them
+
+    /interface bridge port print
+
+    /interface bridge port remove 0
+
+Removing Bridges:
+
+    /interface bridge remove "bridge"
+
+
+
+
+## Interface MTU
+An interface’s Maximum Transmission Unit (MTU) is the maximum size of an Layer 2 (L2) frame
+or L3 packet that can be sent without fragmenting it first.
+
+
+    /interface ethernet print detail
+
+
+## State
+
+    /interface print where running
+
+to list interfaces that are not running
+
+    /interface print where !running
+
+to monitor runing interfaces
+
+    /interface ethernet monitor ether1
+
+## Configuring STP
+
+/interface bridge
+set "LAN Bridge" protocol-mode=rstp
+
+## cable test
+test wires status
+
+    /interface ethernet cable-test ether5
+
+
+## Physical Security
+disable ports
+
+    /interface set ether4,ether5 disabled=yes
+
+
+
+# Addresses
+
+## Static Addresses
