@@ -463,3 +463,17 @@ how to set ntp client using command line and remember that in order to have afte
 /system reboot
 
 
+## DNS
+TO set dns:
+
+    /ip dns set servers=8.8.8.8,8.8.4.4
+
+
+to set a dns record:
+
+    /ip dns
+    static add name=web.manitonetworks.com address=192.168.1.66
+
+to flush a cache:
+
+    /ip dns cache flush
