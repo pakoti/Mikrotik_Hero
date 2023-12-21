@@ -451,7 +451,8 @@ print where interface=bridge
 
 
 ## NTP Client
-how to set ntp client using command line and remember that in order to have after this command you need to reboot the system.
+how to set ntp client using command line?
+after this command you need to reboot the system.
 
     /system ntp client
     set enabled=yes server-dns-names=time.google.com,0.pool.ntp.org
@@ -477,3 +478,94 @@ to set a dns record:
 to flush a cache:
 
     /ip dns cache flush
+
+## how to resolve a domain name in mikrotik shell:
+
+    put [resolve google.com server 8.8.8.8]
+
+
+# Routing
+
+
+
+<ul>
+<li>Static</li>
+<li>Dynamic</li>
+<li>Default</li>
+<li>Blackhole</li>
+<li>Prohibit</li>
+<li>Unreachable</li>
+</ul>
+
+## Routes
+
+to see routing table in a device
+
+    /ip route print
+
+## How to Traceroute an ip address?
+enter following command and then type ip address
+
+    /tool traceroute
+
+## Static Routes
+this command creates a static route, telling the router to send any traffic destined for 192.168.10.0/24 via 10.1.20.1(Router 1):
+
+/ip route add dst-address=192.168.2.0/24 gateway=172.16.1.2
+
+and on the other router (Router 2):
+
+    /ip route add dst-address=192.168.1.0/24 gateway=172.16.1.1
+
+to verify:
+
+    /ip route print where static
+
+
+## Dynamic Routes
+
+<ul>
+<li>OSPF</li>
+<li>OSPF v3</li>
+<li>RIP</li>
+<li>RIPng</li>
+<li>BGP</li>
+<li>Mesh Made Easy (MME)</li>
+</ul>
+
+## OSPF
+if we want to redisgn static routes scenario with OSPF(Router 1):
+
+    /routing ospf
+    network add area=backbone network=172.16.1.0/30 comment=Tunnel
+    network add area=backbone network=192.168.1.0/24 comment=LAN
+
+
+
+(Router 2):
+    /routing ospf
+    network add area=backbone network=172.16.1.0/30 comment=Tunnel
+    network add area=backbone network=192.168.2.0/24 comment=LAN
+
+## Default Routes
+router send any traffic that doesn’t match a route to 17.25.36.1:
+
+    /ip route add dst-address=0.0.0.0/0 gateway=17.25.36.1
+
+if you have multiple upstream
+    /ip route
+    add dst-address=0.0.0.0/0 gateway=17.25.36.1,132.45.76.1
+
+if you have multiple Gateways and you prefer one to another:
+
+    /ip route
+    add dst-address=0.0.0.0/0 gateway=a.b.c.d distance=1
+    add dst-address=0.0.0.0/0 gateway=w.x.y.z distance=2
+
+Print Route Nexthops:
+    /ip route nexthop print
+
+## Blackhole Routes
+used for preventing DDos attacks and also for an insider bot traffic
+
+    /ip route add type=blackhole dst-address=1.2.3.4
