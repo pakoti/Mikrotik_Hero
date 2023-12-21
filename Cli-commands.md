@@ -354,3 +354,112 @@ disable ports
 # Addresses
 
 ## Static Addresses
+
+
+    /ip address
+    add address=192.168.200.1/24 interface=ether5
+
+
+without CIDR
+
+    /ip address
+    add address=192.168.200.1 netmask=255.255.255.0 interface=ether5
+
+if you want to add comments 
+
+    /ip address
+    add address=192.168.200.1/24 interface=ether5 comment=DMZ
+    add address=192.168.17.1/24 interface=ether6 comment=Workbench
+
+
+
+Multiple IP addresses can be added to the same interface.when a network has been assigned a block of static public addresses and only given one hand-off from the upstream provider.
+
+    /ip address
+    add address=172.16.195.17/28 interface=ether1 comment="HTTP Server"
+    add address=172.16.195.18/28 interface=ether1 comment="Email Server"
+    add address=172.16.195.19/28 interface=ether1 comment="CRM Server"
+
+view static addresses only
+
+    /ip address print where !dynamic
+
+## Dynamic Addresses with DHCP
+
+to see logs in Routeros:
+
+    /system logging add action=memory topics=dhcp
+
+## DHCP Servers
+
+<ul>
+<li>Client IP Pool</li>
+<li>DHCP Network</li>
+<li>DHCP Server Instance</li>
+</ul>
+
+Client IP Pool
+
+    /ip pool
+    add name=192.168.88.0 ranges=192.168.88.10-192.168.88.254
+
+DHCP Networks
+
+    /ip dhcp-server network
+    add address=192.168.88.0/24 dns-server=8.8.8.8,8.8.4.4 gateway=192.168.88.1
+
+DHCP Server Instance
+
+    /ip dhcp-server
+    add interface=ether2 address-pool=192.168.88.0 lease-time=8h name=192.168.88.0
+    disabled=no
+
+
+to view active DHCP leases on the router
+    /ip dhcp-server lease print
+
+
+
+## DHCP Client
+
+The following command is used to add a DHCP client to interface ether2:
+
+    /ip dhcp-client
+    add interface=ether2 disabled=no comment="ISP WAN"
+
+
+shows an active DHCP client and it’s assigned options:
+
+    /ip dhcp-client print detail
+
+
+
+## Point-to-Point Addresses
+
+<ul>
+<li>/30 addresses</li>
+<li>/32 addresses</li>
+</ul>
+
+
+## Arp Table
+ARP table can be printed, or the output filtered by interface using the following commands
+
+/ip arp
+print
+print where interface=bridge
+
+
+## NTP Client
+how to set ntp client using command line and remember that in order to have after this command you need to reboot the system.
+
+    /system ntp client
+    set enabled=yes server-dns-names=time.google.com,0.pool.ntp.org
+
+
+## system reboot
+
+
+/system reboot
+
+
