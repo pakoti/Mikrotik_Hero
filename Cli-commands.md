@@ -569,3 +569,44 @@ Print Route Nexthops:
 used for preventing DDos attacks and also for an insider bot traffic
 
     /ip route add type=blackhole dst-address=1.2.3.4
+
+
+
+
+if you want to filter a website at a free cost just blackhole route to that website:
+
+    /ip dns static
+    add name=mikrotik.com address=172.16.0.254 comment="Blackhole address"
+    /ip route
+    add type=blackhole dst-address=172.16.0.254 comment="Blackhole route
+
+
+## Prohibit Routes   
+CMP responses to the sender will state the destination is administratively prohibited.
+
+## Route States
+
+<ul>
+<li>Active</li>
+<li>Connected</li>
+<li>Disabled</li>
+<li>Unreachable</li>
+</ul>
+
+
+Active
+
+    /ip route print where activ
+
+connected   
+
+    /ip route print where connect
+
+Disabled
+
+    /ip route print where disabled
+
+
+
+# VPN and Tunnels
+
