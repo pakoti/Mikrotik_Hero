@@ -723,3 +723,12 @@ wireless scan
 
     /interface wireless scan wlan1 background=yes
 
+
+# How to look for updates?
+
+    system package update check-for-updates
+
+and if you want to update
+
+    system package update upgrade
+
