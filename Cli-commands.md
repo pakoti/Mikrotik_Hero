@@ -609,4 +609,106 @@ Disabled
 
 
 # VPN and Tunnels
+critical different between a VPN and a tunnel is that VPNs use encryption to provide confidentiality. Tunnels like GRE and EoIP don’t provide confidentiality by default
+
+## PPP
+default-encryption profile 
+
+    /ppp profile set default-encryption use-encryption=required
+
+Additional options secure the profile even more, protecting all traffic for PPP connections utilizing
+that profile. The only-one=yes option allows only one active connection per PPP secret. The use-
+encryption=required forces encryption to be used, because not all clients will use by default. The
+following commands create a custom PPP profile with important security settings in place:
+
+    /ppp profile
+    add name=VPN comment="VPN Users"
+    set VPN local-address=192.168.1.1 remote-address=Customers dns-server
+    =8.8.8.8,8.8.4.4
+    set VPN only-one=yes use-encryption=required idle-timeout=5m
+
+## IP Pools for PPP
+    /ip pool
+    add name=Customers ranges=192.168.1.2-192.168.1.10
+
+## PPP Secrets
+
+    /ppp secret
+    add name=tyler password=abc123! service=any profile="Remote Users"
+
+## RADIUS Users
+In service provider and larger enterprise networks PPP typically uses RADIUS for AAA
+
+    /ppp aaa set use-radius=yes
+
+## Monitoring PPP Users
+
+    /ppp active print
+
+search for ppp logs in router log
+
+    /log print where message∼"ppp"
+
+
+## PPTP Server
+
+    /interface pptp-server
+    server set authentication=mschap2 enabled=yes
+
+## PPTP Users
+
+
+    /ppp secret
+    add local-address=10.0.0.1 remote-address=10.0.0.2 name=manitonetworks
+    password=abc123! service=pptp
+
+
+## PPTP Client
+
+    /interface pptp-client
+    add connect-to=vpn.manitonetworks.com user=manitonetworks password=abc123!
+    disabled=no
+
+
+## How to monitor CPU usage in Mikrotik?
+
+    /tool profile
+
+## PPPoE
+used in Metro Ethernet or DSL lines,
+
+
+
+
+## PPPoE Server
+
+
+
+## PPPoE Client
+
+
+/interface pppoe-client
+add name=ISP user=Pakoti password=123 interface=ether1
+
+## SSTP
+Secure Socket Tunneling Protocol (SSTP) leverages SSL and Transport Layer Security (TLS) to
+secure PPP communications.
+
+## SSTP Server
+Verify the server is running
+
+    /interface sstp-server server set enabled=yes
+
+## Securing SSTP Access
+
+    /interface sstp-server server
+    set authentication=mschap2
+
+## Creating an SSTP User
+
+    /ppp secret
+    add name="pakoti" service=sstp password=123 profile=default local-address
+    =192.168.90.1 remote-address=192.168.90.10
+
+## SSTP Client
 
