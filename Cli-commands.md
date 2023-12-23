@@ -29,12 +29,6 @@ we discuss following topics.
 <li>Wait for a few minutes for the router to clear and restore the factory settings</li> 
 </ul>
 
-
-
-
-
-
-
 ## Mikrotik cheatsheets
 
 set router name to Router-1
@@ -53,8 +47,6 @@ show port and interfaces
 change interface name
 
      interface ethernet set ether1 name=Public
-
-
 
 
 disable or enable ethernet 
@@ -80,7 +72,6 @@ adding a user with a specific ip to login
 printing users
 
     user print
-
 
     ip address disable numbers=0
 
@@ -445,9 +436,9 @@ shows an active DHCP client and it’s assigned options:
 ## Arp Table
 ARP table can be printed, or the output filtered by interface using the following commands
 
-/ip arp
-print
-print where interface=bridge
+    /ip arp
+    print
+    print where interface=bridge
 
 
 ## NTP Client
@@ -511,7 +502,7 @@ enter following command and then type ip address
 ## Static Routes
 this command creates a static route, telling the router to send any traffic destined for 192.168.10.0/24 via 10.1.20.1(Router 1):
 
-/ip route add dst-address=192.168.2.0/24 gateway=172.16.1.2
+    /ip route add dst-address=192.168.2.0/24 gateway=172.16.1.2
 
 and on the other router (Router 2):
 
@@ -687,8 +678,8 @@ used in Metro Ethernet or DSL lines,
 ## PPPoE Client
 
 
-/interface pppoe-client
-add name=ISP user=Pakoti password=123 interface=ether1
+    /interface pppoe-client
+    add name=ISP user=Pakoti password=123 interface=ether1
 
 ## SSTP
 Secure Socket Tunneling Protocol (SSTP) leverages SSL and Transport Layer Security (TLS) to
@@ -722,4 +713,13 @@ to verify it:
 
 # Queues
 Two kinds of queues exist in RouterOS:1.simple Queue and 2.Queue tree
+
+
+
+
+# Wireless
+
+wireless scan
+
+    /interface wireless scan wlan1 background=yes
 
