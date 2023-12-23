@@ -712,3 +712,14 @@ Verify the server is running
 
 ## SSTP Client
 
+    /interface sstp-client
+    add connect-to=172.16.0.1 user=pakoti password=123
+
+to verify it:
+
+    /interface sstp-client print
+
+
+# Queues
+Two kinds of queues exist in RouterOS:1.simple Queue and 2.Queue tree
+
