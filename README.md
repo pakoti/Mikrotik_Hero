@@ -3,10 +3,26 @@ Mikrotiks One liners,Cli Commands,Cool Tricks and also Cheatsheets.
 
 
 <p align="center">
-  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mIKROTIKHERO1.PNG">
+  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mIKROTIKHERO1.PNG" alt="mikrotik hero logo created by microsoft ai DALL-E">
 </p>
 
 <p>In this repository you can search for "How to" and also keywords.its good for people who want to use this repository for cheatsheet and also learning.</p>
+
+## What is MikroTik RouterOS?
+
+<p>MikroTik RouterOS is an operating system based on Linux that runs on MikroTik routers and other network devices. It provides a rich set of features and functionalities, such as routing, firewall, bandwidth management, wireless access point, hotspot, VPN, and more. You can use MikroTik RouterOS to create and manage complex network configurations, or to simply connect your home or office devices to the internet.</p>
+
+## Why should you learn MikroTik RouterOS?
+
+Learning MikroTik RouterOS can benefit you in many ways, such as:
+<ul>
+<li>You can save money by using MikroTik devices, which are affordable and reliable, instead of expensive and proprietary ones.</li>
+<li>You can customize your network according to your needs and preferences, by using the flexible and powerful command-line interface or the graphical user interface of MikroTik RouterOS.</li>
+<li>You can enhance your skills and knowledge in networking, by learning the concepts and principles behind MikroTik RouterOS and its features.</li>
+<li>You can advance your career or business, by obtaining MikroTik certifications or offering MikroTik solutions to your clients or customers</li>
+</ul>
+
+
 
 ## Table of content
 |Title|Describtion|Link|
