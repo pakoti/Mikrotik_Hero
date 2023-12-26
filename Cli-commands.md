@@ -733,13 +733,15 @@ and if you want to update
     system package update upgrade
 
 ## Wireless Modes
-<ul>Station modes
+Station modes:
+<ul>
 <li>station</li>
 <li>station-bridge</li>
 <li>station-wds</li>
 </ul>
 
-<ul>AP modes
+AP modes:
+<ul>
 <li>AP-bridge</li>
 <li>bridge</li>
 <li>wds-slave</li>
