@@ -11,7 +11,7 @@ Mikrotiks One liners,Cli Commands,Cool Tricks and also Cheatsheets.
 ## Table of content
 |Title|Describtion|Link|
 |---|---|---|
-|Cli-|||
+|Cli-Commands.md|Giant list of cli Tricks and How tos|<a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/Cli-commands.mdSee More>Link</a>|
 
 
 
