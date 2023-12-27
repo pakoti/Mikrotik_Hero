@@ -20,14 +20,7 @@ we discuss following topics.
 <li>The Dude</li>
 </ul>
 
-## How to Mikrotik Factory Reset Guide
-<ul>
-<li>Disconnect the power cord from the unit.</li> 
-<li>Hold the reset button and do not release.</li> 
-<li>Plug the power cord in and wait until the ACT light starts flashing.</li> 
-<li>Now release the button to clear configuration.</li> 
-<li>Wait for a few minutes for the router to clear and restore the factory settings</li> 
-</ul>
+
 
 ## Mikrotik cheatsheets
 
@@ -661,9 +654,6 @@ search for ppp logs in router log
     disabled=no
 
 
-## How to monitor CPU usage in Mikrotik?
-
-    /tool profile
 
 ## PPPoE
 used in Metro Ethernet or DSL lines,
@@ -717,20 +707,20 @@ Two kinds of queues exist in RouterOS:1.simple Queue and 2.Queue tree
 
 
 
-# Wireless
+
+# Firewalls
+
+
+# NAT
+
+
+
+# Wireless Networks
 
 wireless scan
 
     /interface wireless scan wlan1 background=yes
 
-
-# How to look for updates?
-
-    system package update check-for-updates
-
-and if you want to update
-
-    system package update upgrade
 
 ## Wireless Modes
 Station modes:
@@ -746,4 +736,15 @@ AP modes:
 <li>bridge</li>
 <li>wds-slave</li>
 </ul>
+
+
+# Wireless Security
+
+# Troubleshooting Tools
+
+
+# RouterOS Monitoring
+
+
+# The Dude
 
