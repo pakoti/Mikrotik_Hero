@@ -468,8 +468,6 @@ to flush a cache:
 
 # Routing
 
-
-
 <ul>
 <li>Static</li>
 <li>Dynamic</li>
@@ -867,7 +865,7 @@ to simplify firewall reules
     add chain=dstnat action=netmap dst-address=1.1.1.1 to-addresses=10.1.0.1
 
 # NAT
-
+Network Adderess Translation
 
 ## SRCNAT 
 
