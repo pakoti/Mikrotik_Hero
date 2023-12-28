@@ -27,12 +27,9 @@ set router name to Router-1
     system identity set name=Router-1
 
 
-
-
 show port and interfaces
 
     interface ethernet print
-
 
 
 change interface name
@@ -70,8 +67,6 @@ printing users
 
     ip address remove numbers=0
 
-   
-
 reset back to company
 
     system reset-configuration
@@ -87,75 +82,50 @@ load and save backups
     system backup save name=backup-10
     system backup load name=backup-10.backup
 
-
-
 export and import configuration files
 
     export file=config-11
     import file-name=config-11.rsc
 
-
-
 Default configuration
 
     /system default-configuration print
-
-
 
 show system time
 
     /system clock print
 
-
-
-
 print ip pool addresses
 
     /ip pool print
-
-
 
 setup DHCP server in cli
 
      /ip dhcp-server setup
 
-
-
 show dhcp servers Status
 
      /ip dhcp-server> print
-
-
-
 
 shows a summary of recent configuration changes made on the system and which user performed them
 
     /system history print
 
-
-
 Rolling Back Commands
 
     /undo
-
 
 HotLock:autocomplete commands
 
     [CTRL+V][Enter]
 
-
-
-
 Clearing Command History:clear commands after you sensitive informations
 
     /console clear-history
 
-
-
 Safe Mode: built-in capabilities to protect you from locking yourself out of a device.
 
     [CTRL+X]
-
 
 Login Banner
 
@@ -181,11 +151,9 @@ Device Backup:Backup files are automatically created with a ”.backup” file e
 
     /system backup save name=our_backup
 
-
 lists files on the router
 
     /file print
-
 
 find backups files in the router
 
@@ -195,8 +163,6 @@ find backups files in the router
 Device Restore:
 
     /system backup load name=config.backup
-
-
 
 Using USB Storage
 
@@ -211,9 +177,6 @@ Formatting USB Storage
 Device Reset
 
     /system reset-configuration keep-users=no no-defaults=yes
-
-
-
 
 # Interfaces
 
@@ -291,9 +254,6 @@ list the ports attached to bridges and selectively remove them
 Removing Bridges:
 
     /interface bridge remove "bridge"
-
-
-
 
 ## Interface MTU
 An interface’s Maximum Transmission Unit (MTU) is the maximum size of an Layer 2 (L2) frame
@@ -415,7 +375,6 @@ shows an active DHCP client and it’s assigned options:
     /ip dhcp-client print detail
 
 
-
 ## Point-to-Point Addresses
 
 <ul>
@@ -501,7 +460,6 @@ to verify:
 
     /ip route print where static
 
-
 ## Dynamic Routes
 
 <ul>
@@ -519,8 +477,6 @@ if we want to redisgn static routes scenario with OSPF(Router 1):
     /routing ospf
     network add area=backbone network=172.16.1.0/30 comment=Tunnel
     network add area=backbone network=192.168.1.0/24 comment=LAN
-
-
 
 (Router 2):
     /routing ospf
@@ -551,15 +507,12 @@ used for preventing DDos attacks and also for an insider bot traffic
     /ip route add type=blackhole dst-address=1.2.3.4
 
 
-
-
 if you want to filter a website at a free cost just blackhole route to that website:
 
     /ip dns static
     add name=mikrotik.com address=172.16.0.254 comment="Blackhole address"
     /ip route
     add type=blackhole dst-address=172.16.0.254 comment="Blackhole route
-
 
 ## Prohibit Routes   
 CMP responses to the sender will state the destination is administratively prohibited.
@@ -649,16 +602,11 @@ search for ppp logs in router log
     add connect-to=vpn.manitonetworks.com user=manitonetworks password=abc123!
     disabled=no
 
-
-
 ## PPPoE
 used in Metro Ethernet or DSL lines,
 
 
-
-
 ## PPPoE Server
-
 
 
 ## PPPoE Client
@@ -742,8 +690,6 @@ limit users donwload bandwidth
     add name="voip Download" parent="LAN Download" packet-mark=voip limit-at=5M max-
     limit=50M queue=pcq-download-defaul
 
-
-
 # Firewalls
 
 Firewall Components
@@ -759,8 +705,6 @@ Firewall Chains
 <li>Forward</li>
 <li>Output</li>
 </ul>
-
-
 
 ## Input Chain
 The input chain processes packets inbound to the router itse
@@ -781,7 +725,6 @@ The Output chain processes traffic sent from the route
 
     /ip firewall filter
     add chain=ospf comment="OSPF Chain"
-
 
 ## Rule Sorting
 
@@ -847,7 +790,6 @@ to simplify firewall reules
     add address=192.168.1.0/24 list="LANs" comment=HR
     add address=192.168.2.0/24 list="LANs" comment=Accounting
     add address=192.168.3.0/24 list="LANs" comment=Warehouse
-
 
 
     /ip firewall filter
