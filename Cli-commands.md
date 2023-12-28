@@ -16,8 +16,6 @@ we discuss following topics.
 <li>Wireless Networks</li>
 <li>Wireless Security</li>
 <li>Troubleshooting Tools</li>
-<li>RouterOS Monitoring</li>
-<li>The Dude</li>
 </ul>
 
 
@@ -704,14 +702,191 @@ to verify it:
 # Queues
 Two kinds of queues exist in RouterOS:1.simple Queue and 2.Queue tree
 
+## Scheduling Algorithms
 
+<ul>
+<li>First In, First Out (FIFO)</li>
+<li>Random Early Detection (RED)</li>
+<li>Stochastic Fair Queuing (SFQ)</li>
+<li>Per-Connection Queuing (PCQ)</li>
+<li>None</li>
+</ul>
+
+First In, First Out (FIFO):
+<ul>
+<li>Packet FIFO (PFIFO)</li>
+<li>Byte FIFO (BFIFO)</li>
+<li>Multiple Queue PFIFO (MQ-PFIFO)</li>
+</ul>
+
+
+## Simple Queues
+limit users donwload bandwidth
+    /queue simple
+    add name="192.168.10.0 Download" target=192.168.10.0/24 max-limit=0M/5M comment="192.168.10.0/24 Download Limit"
+
+"0" means unlimited in here.
+
+## Bursting
+
+## Interface Queues
+
+    /queue interface print
+
+## Queue Trees
+
+    /ip firewall mangle
+    add chain=forward dst-address=192.168.1.199 action=mark-packet new-packet-mark
+    =voip
+    /queue tree
+    add name="LAN Download" parent=ether2 limit-at=1M max-limit=50M queue=pcq-
+    download-default
+    add name="voip Download" parent="LAN Download" packet-mark=voip limit-at=5M max-
+    limit=50M queue=pcq-download-defaul
 
 
 
 # Firewalls
 
+Firewall Components
+<ul>
+<li>Chains</li>
+<li>Rules</li>
+<li>Actions</li>
+</ul>
+
+Firewall Chains
+<ul>
+<li>Input</li>
+<li>Forward</li>
+<li>Output</li>
+</ul>
+
+
+
+## Input Chain
+The input chain processes packets inbound to the router itse
+
+    /ip firewall filter print where chain=input
+
+## Forward Chain
+The Forward chain processes packets being forwarded through a router.
+
+    /ip firewall filter print where chain=forward
+
+## Output Chain
+The Output chain processes traffic sent from the route
+
+    /ip firewall filter print where chain=output
+
+## Custom Chains
+
+    /ip firewall filter
+    add chain=ospf comment="OSPF Chain"
+
+
+## Rule Sorting
+
+    /ip firewall filter
+    print stats
+    print stats chain=input
+    print stats chain=forward
+    print stats chain=output
+
+
+## Default input rules
+
+    /ip firewall filter print where chain=input
+
+## Default Forward Rules
+
+    /ip firewall filter print where chain=forward
+
+## Default Output Rules
+
+    /ip firewall filter print where chain=output
+
+## Firewall Actions(Accept)
+
+    /ip firewall filter
+    add chain=input protocol=icmp src-address=a.b.c.d action=accept comment="
+    Network Monitoring"
+
+## Drop
+
+    /ip firewall filter
+    add chain=input action=drop comment="DROP ALL"
+
+## FastTrack Connection
+
+    /ip firewall filter
+    add chain=forward action=fasttrack-connection connection-state=established,
+    related
+    add chain=forward action=accept connection-state=established,related
+
+## Jump
+
+log ssh traffic
+
+    /ip firewall filter
+    add protocol=ospf chain=input action=jump jump-target=ospf
+
+
+log icmp traffic
+    /ip firewall filter
+    add chain=input protocol=icmp action=log log-prefix="ICMP Traffic!"
+
+## Log
+
+    /ip firewall filter
+    add chain=input protocol=tcp dst-port=22 action=log
+
+
+## Address Lists
+to simplify firewall reules
+
+    /ip firewall address-list
+    add address=192.168.1.0/24 list="LANs" comment=HR
+    add address=192.168.2.0/24 list="LANs" comment=Accounting
+    add address=192.168.3.0/24 list="LANs" comment=Warehouse
+
+
+
+    /ip firewall filter
+    add chain=forward src-address-list="LANs" out-interface=ether1 action=accept
+    comment="LANs to WAN"
+
+## Reject
+
+    /ip firewall filter
+    chain=input action=reject protocol=icmp src-address=192.168.88.253
+
+## Netmap
+
+    /ip firewall nat
+    add chain=dstnat action=netmap dst-address=1.1.1.1 to-addresses=10.1.0.1
 
 # NAT
+
+
+## SRCNAT 
+
+    /ip firewall nat
+    add chain=srcnat action=masquerade out-interface=ether1
+
+## DSTNAT   
+The following command would NAT inbound connections on ether1 using TCP port 80 to 192.168.10.100,
+a web server:
+
+    /ip firewall nat
+    add chain=dstnat action=dst-nat in-interface=ether1 protocol=tcp dst-port=80
+    to-addresses=192.168.10.100 to-ports=80
+
+
+## Masquerade
+
+    /ip firewall nat
+    add chain=srcnat action=masquerade out-interface=ether1
 
 
 
@@ -742,9 +917,26 @@ AP modes:
 
 # Troubleshooting Tools
 
+## IP Scan
 
-# RouterOS Monitoring
+    /tool ip-scan address-range=192.168.56.0/24
+
+## MAC Scan
+
+    /tool mac-scan all
+
+## MAC-server
+
+    /tool mac-server print
+
+## MAC Ping
+    /tool mac-server ping
+    set enabled=yes
+    print
+
+## ping speed
+
+    /tool ping-speed 192.168.88.148
 
 
-# The Dude
 
