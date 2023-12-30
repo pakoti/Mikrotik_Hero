@@ -1,11 +1,7 @@
 # Mikrotik 
 we discuss following topics.
 <ul>
-<li>RouterOS Software</li>
-<li>default configurations</li>
-<li>Accessing the Router</li>
 <li>Configuring RouterOS</li>
-<li>Managing Users</li>
 <li>Interfaces</li>
 <li>Addresses</li>
 <li>Routing</li>
@@ -14,13 +10,11 @@ we discuss following topics.
 <li>Firewalls</li>
 <li>NAT</li>
 <li>Wireless Networks</li>
-<li>Wireless Security</li>
 <li>Troubleshooting Tools</li>
 </ul>
 
 
-
-## Mikrotik cheatsheets
+## RouterOS Software
 
 set router name to Router-1
 
@@ -852,8 +846,6 @@ AP modes:
 <li>wds-slave</li>
 </ul>
 
-
-# Wireless Security
 
 # Troubleshooting Tools
 
