@@ -43,3 +43,16 @@ after this command you need to reboot the system.
     set enabled=yes server-dns-names=time.google.com,0.pool.ntp.org
 
 
+## how to get out of safe mode?
+just <code>[ctrl+x]</code> in command line.
+
+## how to recover forgotten passwords in RouterOS?
+There is no password recovery procedure in mikrotik devices.you will need to re-flash the board using NetInstall.
+
+## how to shutdown mikrotik router board?
+log onto the router and click on "System > Shutdown" or
+    /system shutdown
+
+
+## how to turn ON mikrotik router board?
+disconnect it from power, completely, then reconnect a power source to it

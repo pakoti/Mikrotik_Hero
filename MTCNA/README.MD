@@ -169,6 +169,9 @@ CloudRouterSwitch (short version CRS, RouterOS device) CloudSmartSwitch (short v
     enclosure type - same as for RouterBOARD products
 
 
+## what is NetInstall?
+its a great tool to install RouterOS in mikrotik devices.
+
 
 
 
