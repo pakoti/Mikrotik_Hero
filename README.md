@@ -3,7 +3,7 @@ Mikrotiks One liners,Cli Commands,Cool Tricks and also Cheatsheets.
 
 
 <p align="center">
-  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mIKROTIKHERO1.PNG" alt="mikrotik hero logo created by microsoft ai DALL-E">
+  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mIKROTIKHERO1.PNG" alt="mikrotik hero logo created by microsoft ai DALL-E" border-radius: 50%>
 </p>
 
 <p>In this repository you can search for "How to" and also keywords.its good for people who want to use this repository for cheatsheet and also learning.</p>
@@ -29,7 +29,7 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 |---|---|---|
 |Cli-Commands.md|Giant list of cli Tricks and How tos| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/Cli-commands.md">Link</a>|
 |MTCNA|Mikrotik Certified Network Engineer|<a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/MTCNA/README.MD">Link</a>|
-|How-to.md|a collection of FAQ(Frequently Asked Questions)| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/How-to.md">Link</a|
+|How-to.md|a collection of FAQ(Frequently Asked Questions)| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/How-to.md">Link</a>|
 
 
 
