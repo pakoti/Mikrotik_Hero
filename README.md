@@ -23,6 +23,11 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 </ul>
 
 ## MikroTik certified training programs
+
+<p align="center">
+  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mikrotik-certs.PNG" alt="mikrotik Certification">
+</p>
+
 <ul>
 <li>MTCNA - MikroTik Certified Network Associate</li>
 <li>MTCRE - MikroTik Certified Routing Engineer</li>
@@ -36,9 +41,6 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 <li>MTCEWE - MikroTik Certified Enterprise Wireless Engineer</li>
 </ul>
 
-<p align="center">
-  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mikrotik-certs.PNG" alt="mikrotik Certification">
-</p>
 
 
 
