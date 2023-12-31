@@ -56,3 +56,13 @@ log onto the router and click on "System > Shutdown" or
 
 ## how to turn ON mikrotik router board?
 disconnect it from power, completely, then reconnect a power source to it
+
+
+## how to downgrade RouterOS version?
+Drag and drop lower version then got to <code>System</code>--> <code>Package List</code>
+
+
+
+## how to upgradee RouterOS version?
+<p>1. Drag and drop Upper version then reboot </p>
+<p> 2. <code>System</code>--> <code>Package List</code> --><code>check for updates</code> </p>
