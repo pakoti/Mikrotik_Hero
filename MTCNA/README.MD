@@ -172,24 +172,19 @@ CloudRouterSwitch (short version CRS, RouterOS device) CloudSmartSwitch (short v
 ## what is NetInstall?
 its a great tool to install RouterOS in mikrotik devices.
 
+## backups
+we have two kinds of backups in RouterOS:
+<p>1.full backups:only works in its Family Routers.and if tou want resotre backups in another router you should reset interfaces mac-adderesses.</p>
 
+<p>2.backup only parts of mikrotik router
 
+    export file=mikrotik-hero
 
+and if you want to see cli commands that you have configured:
 
+    export
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</p>
 
 
 
