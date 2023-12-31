@@ -186,6 +186,8 @@ and if you want to see cli commands that you have configured:
 
 </p>
 
+## WinBox
+to work with mikrotik GUI you can use <code>Winbox.exe</code> from here <a href="https://mikrotik.com/download">Mikrotik Offcial website</a> or you download from this repository.
 
 
 
