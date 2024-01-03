@@ -193,4 +193,8 @@ to work with mikrotik GUI you can use <code>Winbox.exe</code> from here <a href=
 
 
 ## resources
+
+
+<a href="https://ictadmins.com/">خانه میکروتیک </a>
+<a href="https://mikrotik.com/download">Mikrotik Offcial download</a>
 <a href="https://help.mikrotik.com/docs/display/ROS/Product+Naming">products naming details</a>

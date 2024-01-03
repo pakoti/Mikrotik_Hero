@@ -8,6 +8,15 @@ Mikrotiks One liners,Cli Commands,Cool Tricks and also Cheatsheets.
 
 <p>In this repository you can search for "How to" and also keywords.its good for people who want to use this repository for cheatsheet and also learning.</p>
 
+<p>
+در مخزن سعی کرده ام هر چه که بتوانم درباره ی میکتروتیک و نحوه کار کردن و همچنین دستورات خط فرمان بنویسم.چیزی شاهد ان هستیم این هست که تا به امروز جایی نبوده که بشود همه منابع متن باز و رایگان را بتوان در یکجا جمع کرد.
+</p>
+<p>
+در اینجا سعی کردم مطالب مفید هم خلق کنم و هم منابع خلق شده را به اشتراک بذارم.امیدوارم که مفید واقع باشد.با ارزوی موفقیت برای همه
+</p>
+
+
+
 ## What is MikroTik RouterOS?
 
 <p>MikroTik RouterOS is an operating system based on Linux that runs on MikroTik routers and other network devices. It provides a rich set of features and functionalities, such as routing, firewall, bandwidth management, wireless access point, hotspot, VPN, and more. You can use MikroTik RouterOS to create and manage complex network configurations, or to simply connect your home or office devices to the internet.</p>
@@ -46,12 +55,20 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 
 
 ## Table of content
+
 |Title|Describtion|Link|
 |---|---|---|
 |Cli-Commands.md|Giant list of cli Tricks and How tos| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/Cli-commands.md">Link</a>|
 |MTCNA|Mikrotik Certified Network Engineer|<a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/MTCNA/README.MD">Link</a>|
 |How-to.md|a collection of FAQ(Frequently Asked Questions)| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/How-to.md">Link</a>|
 
+
+
+
+## Resources
+
+<a href="https://mikrotik.com">products naming details</a>
+<a href="https://ictadmins.com/">خانه میکروتیک </a>
 
 
 
