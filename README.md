@@ -73,7 +73,7 @@ This project is licensed under the Creative Commons Zero v1.0 Universal license.
 
 Creative Commons Zero v1.0 Universal
 
-<img src=88x31.png>
+<img src=88x31.png alt="Creative Commons Zero v1.0 Universal">
 
 ## Contributing
 
