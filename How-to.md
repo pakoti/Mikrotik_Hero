@@ -65,4 +65,9 @@ Drag and drop lower version then got to <code>System</code>--> <code>Package Lis
 
 ## how to upgradee RouterOS version?
 <p>1. Drag and drop Upper version then reboot </p>
-<p> 2. <code>System</code>--> <code>Package List</code> --><code>check for updates</code> </p>
+<p>2. <code>System</code>--> <code>Package List</code> --><code>check for updates</code> </p>
+
+## how to reset a RouterOS device
+
+<p>1.run the command <code>/system reset-configuration</code>from command line interface </p>
+<p>2.do it from <code>System</code> --> <code>Reset Configuration </code>menu in the graphical user interface</p>
