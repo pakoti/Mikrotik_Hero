@@ -73,6 +73,14 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 <a href="https://ictadmins.com/">خانه میکروتیک </a>
 
 
+<a href="https://buananetpbun.github.io/">a good blog for scripts</a>
+
+
+
+<a href="https://router-os.github.io/">another good blog</a>
+
+
+
 
 ## Installation
 
