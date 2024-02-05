@@ -229,6 +229,8 @@ VPN
 <li>WireGaurd</li>
 </ul>
 
+# Mean Time Between Failure (MTBF)
+mean time between failures, a measure of the reliability of a device or system for RouterBOARD hardware
 
 
 
