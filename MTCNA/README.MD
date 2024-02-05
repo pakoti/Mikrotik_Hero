@@ -229,8 +229,19 @@ VPN
 <li>WireGaurd</li>
 </ul>
 
-# Mean Time Between Failure (MTBF)
+## Mean Time Between Failure (MTBF)
 mean time between failures, a measure of the reliability of a device or system for RouterBOARD hardware
+
+
+## Hotspot
+
+<ul>
+<li>
+<code>ip</code> then <code>Hotspot</code> (in here you should choose an interface and also an address pool)
+</li>
+<li>create a <code>new hotspot user profile</code></li>
+<li>in <code>user </code>choose a username and a password and also bandwidth limitations</li>
+</ul>
 
 
 
