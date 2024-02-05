@@ -243,6 +243,16 @@ mean time between failures, a measure of the reliability of a device or system f
 <li>in <code>user </code>choose a username and a password and also bandwidth limitations</li>
 </ul>
 
+## Mangle
+what is mangle?Mangle is a kind of 'marker' that marks packets for future processing with special marks.
+
+## Masquerade
+replaces the source port of an IP packet with one specified by to-ports parameter and replace the source address of an IP packet to the IP determined by the routing facility
+
+
+## What is MikroTik CAPsMAN?
+
+CAPsMAN, is a centralizing system by MikroTik. It gives the possibility to create a system of controlled access points, called CAPs, by a Controller called CAPsManager.
 
 
 ## resources
