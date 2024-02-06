@@ -71,3 +71,14 @@ Drag and drop lower version then got to <code>System</code>--> <code>Package Lis
 
 <p>1.run the command <code>/system reset-configuration</code>from command line interface </p>
 <p>2.do it from <code>System</code> --> <code>Reset Configuration </code>menu in the graphical user interface</p>
+
+
+## how to do load balancing and Link Redundancy in mikrotik?
+
+<ul>
+<li>Configuring Mikrotik</li>
+<li>Configuring Mangle</li>
+<li>Configuring Policy-based routing</li>
+<li>Configuring NAT</li>
+</ul>
+

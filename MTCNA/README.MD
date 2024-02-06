@@ -260,6 +260,9 @@ CAPsMAN, is a centralizing system by MikroTik. It gives the possibility to creat
 <a href="https://mum.mikrotik.com/presentations/AM17/presentation_4679_1507881944.pdf">VPN & Tunneling[PDF]</a>
 
 
+<a href="https://arghavannet.com/blog/how-to-aggregate-two-internate-connection-in-mikrotik/">how to aggregate two internate connection in mikrotik</a>
+
+
 <a href="https://ictadmins.com/">خانه میکروتیک </a>
 
 
