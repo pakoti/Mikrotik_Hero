@@ -56,7 +56,7 @@ Learning MikroTik RouterOS can benefit you in many ways, such as:
 
 ## Table of content
 
-|Title|Describtion|Link|
+|Title|Description|Link|
 |---|---|---|
 |Cli-Commands.md|Giant list of cli Tricks and How tos| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/Cli-commands.md">Link</a>|
 |MTCNA|Mikrotik Certified Network Engineer|<a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/MTCNA/README.MD">Link</a>|

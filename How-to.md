@@ -82,3 +82,11 @@ Drag and drop lower version then got to <code>System</code>--> <code>Package Lis
 <li>Configuring NAT</li>
 </ul>
 
+## How to add an interface to dhcp client interfaces?
+
+/ip dhcp-client add interface=ether1 disabled=no
+<p>and to see if its working:
+
+    ip dhcp-client> print detail
+
+</p>
