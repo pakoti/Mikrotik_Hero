@@ -44,3 +44,15 @@
 
 
 
+
+
+
+## Mikrotik One-Liners
+
+return average ping time of a domain name:
+
+    :put ([/tool flood-ping [:resolve "www.mikrotik.com"] count=3 as-value]->"avg-rtt")
+
+return average ping time of a ip:
+
+    :put ([/tool flood-ping 1.1.1.1 count=3 as-value]->"avg-rtt")
