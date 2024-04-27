@@ -56,3 +56,23 @@ return average ping time of a domain name:
 return average ping time of a ip:
 
     :put ([/tool flood-ping 1.1.1.1 count=3 as-value]->"avg-rtt")
+
+
+
+set best dns servers based of average ping time:
+
+    :global ping2 ([/tool flood-ping 8.8.8.8 count=3 as-value]->"avg-rtt");:global ping1 ([/tool flood-ping 1.1.1.1 count=3 as-value]->"avg-rtt");:if ($ping1>$ping2) do={[/ip dns set servers=1.1.1.1]} else={[/ip dns set servers=8.8.8.8]};
+
+
+adding the script to the scripts section on mikrotik:
+
+    /system script add name=best_DNS source=[:global ping2 ([/tool flood-ping 8.8.8.8 count=3 as-value]->"avg-rtt");:global ping1 ([/tool flood-ping 1.1.1.1 count=3 as-value]->"avg-rtt");:if ($ping1>$ping2) do={[/ip dns set servers=1.1.1.1]} else={[/ip dns set servers=8.8.8.8]};];
+
+run that script with scheduler:
+
+    system scheduler add name=sch-dns interval=60s on-event=s1
+
+
+run that script with cli:
+
+    system scripts run s1
