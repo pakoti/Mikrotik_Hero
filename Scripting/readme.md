@@ -47,7 +47,7 @@
 ## Usefull Mikrotik Scripts
 |Script|Description|Link|
 |---|---|---|
-|DNS-checker.rsc|set the dns servers with the lowest ping|<a href="Scripting/DNS-checker.rsc">Link</a>|
+|DNS-checker.rsc|set the dns servers with the lowest ping|<a href="/DNS-checker.rsc">Link</a>|
 |block-dns-recursive.rsc|Block-Open Recursive DNS|Scripting/Block-dns-recursive.rsc|
 |block-hotspot.rsc|block users hotspoting thier internet|Scripting/DNS-checker.rsc|
 |protect-port-service.rsc|Securing the Default Service Port telnet, ssh, ftp, winbox, www and api. or if not in use can be disabled. if using a custom port|Scripting/protect-port-service.rsc|
