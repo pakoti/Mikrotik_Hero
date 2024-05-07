@@ -29,7 +29,6 @@
 
 |Command|Description|
 |---|---|
-
 |:resolve example.com|Return the IP address resolution for a DNS lookup|
 |:pick <str> <start> <end>|Return a specific section of the provided value|
 |:len <str>|Return the value length or number of items in an array|
@@ -41,6 +40,17 @@
 |:put ($arraytest->3)|Returning a specific value from an array|
 |[/ip arp find address~"^192"]|Searching for matches using a regular expression|
 |Defined Functions!|Functions/subroutines that can be called inside scripts|
+
+
+
+
+## Usefull Mikrotik Scripts
+|Script|Description|Link|
+|---|---|---|
+|DNS-checker.rsc|set the dns servers with the lowest ping|Scripting/DNS-checker.rsc|
+|block-dns-recursive.rsc|Block-Open Recursive DNS|Scripting/Block-dns-recursive.rsc|
+|block-hotspot.rsc|block users hotspoting thier internet|Scripting/DNS-checker.rsc|
+|protect-port-service.rsc|Securing the Default Service Port telnet, ssh, ftp, winbox, www and api. or if not in use can be disabled. if using a custom port|Scripting/protect-port-service.rsc|
 
 
 
