@@ -48,9 +48,11 @@
 |Script|Description|Link|
 |---|---|---|
 |DNS-checker.rsc|set the dns servers with the lowest ping|<a href="DNS-checker.rsc">Link</a>|
-|block-dns-recursive.rsc|Block-Open Recursive DNS|Scripting/Block-dns-recursive.rsc|
-|block-hotspot.rsc|block users hotspoting thier internet|Scripting/DNS-checker.rsc|
-|protect-port-service.rsc|Securing the Default Service Port telnet, ssh, ftp, winbox, www and api. or if not in use can be disabled. if using a custom port|Scripting/protect-port-service.rsc|
+|block-dns-recursive.rsc|Block-Open Recursive DNS|<a href="Block-dns-recursive.rsc">Link</a>|
+|block-hotspot.rsc|block users hotspoting thier internet|<a href="block-hotspot.rsc">Link</a>|
+|protect-port-service.rsc|Securing the Default Service Port telnet, ssh, ftp, winbox, www and api. or if not in use can be disabled. if using a custom port|<a href="protect-port-service.rsc">Link</a>|
+|block-modem-access.rsc|Modem or ISP router generally has a default configuration.block poeples access to the modem or gateway Router.|<a href="block-modem-access.rsc">Link</a>|
+|drop-tracert.rsc|Hide network path by blocking icmp traffic|<a href="drop-tracert.rsc">Link</a>|
 
 
 
