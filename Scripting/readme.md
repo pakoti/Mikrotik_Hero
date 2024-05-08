@@ -3,7 +3,7 @@ in this section we will review how to develop scripts in Router-os.
 <ul>
 <li>1.<a href="#basic-scripting-commands">Basic Scripting Commands</a></li>
 <li>2.<a href="#functions">Funtions</a></li>
-<li>3.<a href="#mikrotik-one-liners"></a>Mikrotik One-Liners</li>
+<li>3.<a href="#mikrotik-one-liners">Mikrotik One-Liners</a></li>
 <li>4.<a href="#usefull-mikrotik-scripts">Usefull Mikrotik Scripts</a></li>
 </ul>
 

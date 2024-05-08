@@ -2,7 +2,7 @@
 in this section i am collecting interesting FAQ.just simply search for what you are looking for.
 
 
-# How to look for updates?
+## How to look for updates?
 
     system package update check-for-updates
 
@@ -21,8 +21,12 @@ and if you want to update
 </ul>
 
 ## How to monitor CPU usage in Mikrotik?
-
+just type this command in the terminal or goto tool profile.
     /tool profile
+
+
+## How to reset password in mikrotik?
+we have official way to restore password in mikrotik.if you try to reset mikrotik all configurations will be deleted.
 
 
 ## How to Traceroute an ip address?
