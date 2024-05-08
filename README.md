@@ -3,7 +3,7 @@ a great mega collection of Mikrotiks One liners,Cli Commands,Cool Tricks , Cheat
 
 
 <p align="center">
-  <img src="https://github.com/pakoti/Mikrotik_Hero/blob/main/mIKROTIKHERO1.PNG" alt="mikrotik hero logo created by microsoft ai DALL-E" width=50% height=50%>
+  <img src="/img/mikrotik_hero.PNG" alt="mikrotik hero logo created by microsoft ai" width=50% height=50%>
 </p>
 
 <p>In this repository you can search for "How to" and also keywords.its good for people who want to use this repository for cheatsheet and also learning.</p>
