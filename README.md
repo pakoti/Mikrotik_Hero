@@ -13,10 +13,16 @@ a great mega collection of Mikrotiks One liners,Cli Commands,Cool Tricks , Cheat
 
 |Title|Description|Link|
 |---|---|---|
-|Cli-Commands.md|Giant list of cli Tricks and How tos| <a href="https://github.com/pakoti/Mikrotik_Hero/blob/main/Cli-commands.md">Link</a>|
+|Cli-Commands.md|Giant list of cli Tricks and How tos| <a href="Cli-commands.md">Link</a>|
 |Mikrotik_FAQ.md|a collection of FAQ(Frequently Asked Questions)| <a href="Mikrotik_FAQ.md">Link</a>|
 |Router-os scripting |learn scripting in mikrotik,some practical scripts|<a href="/Scripting/readme.md">Link</a>|
 |Mikrotik Educational Materials|open-source and free educational material including slides,notes|<a href="/Mikrotik_Certifications/reame.md">Link</a>|
+|Mikrotik_Security.md|about Firewalls and Hardenings| <a href="/Security/Mikrotik_Security.md">Link</a>|
+
+
+
+## Resources
+
 
 
 
